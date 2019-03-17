@@ -11,10 +11,6 @@
         <input type="password" value="">
         <input type="submit" value="Login">
 
-        <?php
-
-        echo 2;
-    ?>
 
     </body>
 </html>
