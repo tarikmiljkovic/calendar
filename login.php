@@ -1,3 +1,10 @@
+<?php 
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,6 +12,7 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
+        
         
         <h1>Calendar App</h1>
         <input type="text" value="username">

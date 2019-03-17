@@ -5,13 +5,13 @@ body{
     font-family: 'IBM Plex Sans', sans-serif;
     background: #2F80ED;
     color: white;
-
 }
 
 input{
     outline:0;
-    padding: 14px;
+    padding: 12px;
     border: 0px;
+    font-size: 1em;
     
 }
 
@@ -21,4 +21,7 @@ h1{
 
 ul{
     list-style: none;
+}
+ul a:link, a:active, a:visited{
+    color: white;
 }
