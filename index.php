@@ -21,18 +21,18 @@ body {
   padding: 1px;
   text-align: center;
 }
-/* Style the top navigation bar */
+/* Style the topnavigation bar*/
 .topnav {
   overflow: hidden;
   background-color: black; /*original color #333*/
 }
-/* Style the topnav links */
+/* Style the topnavigation bar*/
 .topnav a {
   float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 15px; /*14px 16px*/
   text-decoration: none;
 }
 /* Change color on hover */
@@ -40,6 +40,7 @@ body {
   background-color: red;
   color: black;
 }
+
 /* Create three unequal columns that floats next to each other 
 .column {
   float: left;
@@ -49,9 +50,10 @@ body {
 .column.side {
   width: 25%;
 }*/
-/* Middle column */
+
+/* Middle column position*/
 .column.middle {
-  width: 75%;
+  width: 100%;
 }
 /* Clear floats after the columns */
 .row:after {
@@ -85,29 +87,29 @@ body {
     background-color: #4CAF50;
     color: white;
   }
- 
+ /*Input box for Username*/
   input[type=text], select {
-  width: 100%;
+  width: auto;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
-
+/*Input box for password*/
   input[type=password], input[type=email], input[type=url], select {
-  width: 100%;
+  width: auto;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
-
+/*Log In - submit button*/
 input[type=submit] {
-  width: 100%;
+  width: auto;
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -118,7 +120,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #45a050;
 }
 
 input[type=button] {
@@ -127,8 +129,8 @@ input[type=button] {
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
-  border: none;
-  border-radius: 4px;
+  border: 2px;
+  border-radius: 3px;
   cursor: pointer;
 }
 
@@ -161,12 +163,14 @@ div {
   ?>
 </nav>
 <div class="row">
+  
   <!-- Side columns not necessary?
   <aside class="column side">
     <h2>Side</h2>
     <p>You can add some additional text here ...</p>
   </aside>
   -->
+  
   <main class="column middle" name="Haupt" id="Haupt">
     <?php
       if (isset($_REQUEST['content'])){
@@ -178,6 +182,7 @@ div {
       }
     ?>
   </main>
+  
   <!-- Side columns not necessary?
   <aside class="column side">
     <h2>Side</h2>
@@ -185,11 +190,11 @@ div {
     <p>Content could be added via PHP-include</p>
   </aside>
   -->
+  
 </div>
 <footer class="footer">
 <img src="cal_logo.png" style="width:244px;height:244px"	;>
-  <p>Created by Dag Mustafa, Rauschnick Alexander and Vanicek Rafael.</p>
-</footer>
+  <p>Created by Dag Mustafa, Rauschnick Alexander, Vanicek Rafael and Miljkovic Tarik</p>
 
 </body>
 </html>
