@@ -3,13 +3,11 @@
 <head>
 <style>
 * {box-sizing: border-box;}
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
 
 .month {
   padding: 70px 25px;
   width: 100%;
-  background: #1abc9c;
+  background: #930D0D;
   text-align: center;
 }
 
@@ -20,7 +18,7 @@ body {font-family: Verdana, sans-serif;}
 
 .month ul li {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -143,6 +141,8 @@ body {font-family: Verdana, sans-serif;}
   <li>30</li>
   <li>31</li>
 </ul>
+
+
 
 </body>
 </html>

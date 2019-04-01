@@ -65,6 +65,12 @@
       $_SESSION['login'] = $userlogin;
       header("Location: index.php");
   }
+  elseif ($userlogin==="Tarik" && $password=="1234") {
+      echo "<h2>Welcome " . $userlogin . " to the program </h2>\n";
+      //Set the Session Cookie in order to identify the user
+      $_SESSION['login'] = $userlogin;
+      header("Location: index.php");
+  }
   else {
       echo "<h2>Sorry, login incorrect</h2>\n";
       // header("Location: index.php");

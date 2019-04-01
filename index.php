@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <head>
   <title>Calendar App</title>
-  <html lang="de">
+  <html lang="de,en">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,18 +13,18 @@
   box-sizing: border-box;
 }
 body {
-  margin: 0;
+  margin: auto;
 }
 /* Style the header */
 .header {
-  background-color: #549AFE; /*original color white #f1f1f1*/
+  background-color: #549AFE; 
   padding: 1px;
   text-align: center;
 }
 /* Style the topnavigation bar*/
 .topnav {
   overflow: hidden;
-  background-color: black; /*original color #333*/
+  background-color: black; 
 }
 /* Style the topnavigation bar*/
 .topnav a {
@@ -40,16 +40,6 @@ body {
   background-color: red;
   color: black;
 }
-
-/* Create three unequal columns that floats next to each other 
-.column {
-  float: left;
-  padding: 10px;
-} */
-/* Left and right column 
-.column.side {
-  width: 25%;
-}*/
 
 /* Middle column position*/
 .column.middle {
@@ -164,13 +154,6 @@ div {
 </nav>
 <div class="row">
   
-  <!-- Side columns not necessary?
-  <aside class="column side">
-    <h2>Side</h2>
-    <p>You can add some additional text here ...</p>
-  </aside>
-  -->
-  
   <main class="column middle" name="Haupt" id="Haupt">
     <?php
       if (isset($_REQUEST['content'])){
@@ -182,14 +165,6 @@ div {
       }
     ?>
   </main>
-  
-  <!-- Side columns not necessary?
-  <aside class="column side">
-    <h2>Side</h2>
-    <p>Add here some banners, advertisments interesting stuff ...</p>
-    <p>Content could be added via PHP-include</p>
-  </aside>
-  -->
   
 </div>
 <footer class="footer">
