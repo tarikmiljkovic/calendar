@@ -1,3 +1,135 @@
-body{
-    
-}
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,700');
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: auto;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  /* Style the header */
+  .header {
+    background-color: #166df9; 
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+
+  }
+  /* Style the topnavigation bar*/
+  .topnav {
+    overflow: hidden;
+    background-color: black; 
+  }
+  /* Style the topnavigation bar*/
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 15px; /*14px 16px*/
+    text-decoration: none;
+  }
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: red;
+    color: black;
+  }
+  
+  /* Middle column position*/
+  .column.middle {
+    width: 100%;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+
+
+
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+      width: 100%;
+      float: none;
+    }
+  }
+  /* Style the footer */
+  .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+  }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(2n){background-color: #f2f2f2}
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+   /*Input box for Username*/
+    input[type=text], select {
+    width: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  /*Input box for password*/
+    input[type=password], input[type=email], input[type=url], select {
+    width: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  /*Log In - submit button*/
+  input[type=submit] {
+    width: auto;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a050;
+  }
+  
+  input[type=button] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  input[type=button]:hover {
+    background-color: #45a049;
+  }
+  
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
