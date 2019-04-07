@@ -1,7 +1,8 @@
 <?php
   //Use htmlspecialchars in order to prevent XSS Attacks!!!
-  $userlogin=htmlspecialchars($_POST['username']);
-  $password=htmlspecialchars($_POST['password']);
+  //"trim" prevents spaces in string and "stripslashes" converts/removes slashes:
+  $userlogin=htmlspecialchars(stripslashes(trim($_POST['username'])));
+  $password=htmlspecialchars(stripslashes(trim($_POST['password'])));
   
   define('MYSQL_USER', 'root');
   define('MYSQL_PASSWORD', 'csdc21bb');
@@ -13,12 +14,11 @@
   );
  
   $pdo = new PDO(
-    "mysql:host=" . MYSQL_HOST . ";dbname=" . MYSQL_DATABASE, 
+    "mysql:host=" . MYSQL_HOST . ";dbname=" . MYSQL_DATABASE,
     MYSQL_USER, //Username
     MYSQL_PASSWORD, //Password
     $pdoOptions //Options
   );
-  
   //Retrieve the user account information for the given username.
   $sql = "SELECT Nick,password FROM `User-credentials` WHERE Nick = :username AND password = :password";
   $stmt = $pdo->prepare($sql);
@@ -44,8 +44,9 @@
         echo "<h2>Sorry, something went wrong :(</h2>\n";
         header("Location: index.php");
     }
+  ?>
   
-  
+  <?php
   //Hardcoded password verification
   /*
   if ($userlogin==="Alex" && $password=="1050") {
@@ -76,5 +77,4 @@
       echo "<h2>Sorry, login incorrect</h2>\n";
       // header("Location: index.php");
   } */
-
 ?>
