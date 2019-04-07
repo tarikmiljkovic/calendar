@@ -3,11 +3,10 @@
   $userlogin=htmlspecialchars($_POST['username']);
   $password=htmlspecialchars($_POST['password']);
   
-  // Pls. add here your Username/Password Validation either through DB or through File
-  /*define('MYSQL_USER', 'root');
-  define('MYSQL_PASSWORD', '');
+  define('MYSQL_USER', 'root');
+  define('MYSQL_PASSWORD', 'csdc21bb');
   define('MYSQL_HOST', 'localhost');
-  define('MYSQL_DATABASE', 'webtech');
+  define('MYSQL_DATABASE', 'Calendar');
   $pdoOptions = array(
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_EMULATE_PREPARES => false
@@ -21,32 +20,34 @@
   );
   
   //Retrieve the user account information for the given username.
-  $sql = "SELECT id, username, password FROM users WHERE username = :username";
+  $sql = "SELECT Nick,password FROM `User-credentials` WHERE Nick = :username AND password = :password";
   $stmt = $pdo->prepare($sql);
   //Bind value. Always work with bind values in order to prevent SQL-injection attacks!
   $stmt->bindValue(':username', $userlogin);
+  $stmt->bindValue(':password', $password);
   $stmt->execute();
   //Fetch row.
   $user = $stmt->fetch(PDO::FETCH_ASSOC);
   //If $row is FALSE.
   if($user === false){
-    echo "<h2>Sorry, wrong User Name</h2>\n";
+    echo "<h4>Sorry, wrong credentials</h4>\n";
+    include('login.inc.php');
     //header("Location: index.php");
-  } else {
-    //User found, so check password and set $_SESSSION[login] if succesfull      
-    //Note: I used plain text password
-    if ($password == $user['password']){    
-      echo "<h2>Welcome " . $userlogin . " to the program </h2>\n";
-      //Set the Session Cookie in order to identify the user
+  }elseif ($password == $user['password']){
+      /* If credentials correct ->
+      Set the Session Cookie in order to identify the user */
       $_SESSION['login'] = $userlogin;
-      //header("Location: index.php");     
+      header("Location: index.php");
+      //Display main interface
+      include('main.inc.php');
     } else {
-      echo "<h2>Sorry, wrong Password</h2>\n";
-      //header("Location: index.php");
+        echo "<h2>Sorry, something went wrong :(</h2>\n";
+        header("Location: index.php");
     }
-  }*/
-  //Hardcoded password verification
   
+  
+  //Hardcoded password verification
+  /*
   if ($userlogin==="Alex" && $password=="1050") {
       echo "<h2>Welcome " . $userlogin . " to the program </h2>\n";
       //Set the Session Cookie in order to identify the user
@@ -74,6 +75,6 @@
   else {
       echo "<h2>Sorry, login incorrect</h2>\n";
       // header("Location: index.php");
-  }
+  } */
+
 ?>
-  

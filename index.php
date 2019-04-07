@@ -2,6 +2,19 @@
   session_start();
 ?>
 <!DOCTYPE html>
+<!-- Check SQL DATABASE CONNECTION -->
+<?php
+  $servername = "localhost";
+  $user = "root";
+  $pw = "csdc21bb";
+  
+  $connection = new mysqli($servername, $user, $pw);
+  if($connection->connect_error){
+    die("Connection failed!".$connection->connect_error);
+  }
+  echo "SQL DB successfully connected!";
+?>
+<!--  -->
 <html lang="en">
 <head>
   <title>Calendar App</title>
@@ -19,13 +32,14 @@
     // Include the right Nav-Bar depending if the user is logged in
     if (isset($_SESSION['login'])){
       include("loginnav.inc.php");
-    }
+    }           
     else
     {
       include('nav.inc.php');
     }
   ?>
 </nav>
+
 <div class="row">
   
   <main class="column middle" name="Haupt" id="Haupt">
@@ -42,7 +56,7 @@
   
 </div>
 <footer class="footer">
-<img src="cal_logo.png" style="width:244px;height:244px"	;>
+<img src="cal_logo.png" style="width:214px;height:214px"	;>
   <p>Created by Dag Mustafa, Rauschnick Alexander, Vanicek Rafael and Miljkovic Tarik</p>
 
 </body>

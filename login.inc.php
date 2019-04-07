@@ -1,6 +1,6 @@
 <center>
 <div>
-<form action="index.php" method="post">
+<form action="index.php" method="POST"> <!-- NEVER GET-method for sesitive Data -> plaintext in URL -->
   <label for="username">Username:</label> 
   <input type="text" id="username" name="username" required><br><br> 
   <label for="pwd">Password:</label>  
