@@ -6,7 +6,7 @@
 <?php
   $servername = "localhost";
   $user = "root";
-  $pw = "csdc21bb";
+  $pw = "";
   
   $connection = new mysqli($servername, $user, $pw);
   if($connection->connect_error){
