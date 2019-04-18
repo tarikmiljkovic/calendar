@@ -63,3 +63,4 @@ th, td {
     <!-- ## -->
 </html>
 >>>>>>> Stashed changes
+<?php include("myCalendar.inc.php"); ?>

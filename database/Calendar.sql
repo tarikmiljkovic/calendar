@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 12, 2019 at 07:16 PM
+-- Generation Time: Apr 18, 2019 at 08:41 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -39,9 +39,7 @@ CREATE TABLE `User-credentials` (
 --
 
 INSERT INTO `User-credentials` (`Nick`, `password`, `id`) VALUES
-('', '', 1),
-('Ruffy', '1100', 2),
-('', '', 3),
+('Ruffy', '1234', 2),
 ('Musti', '1234', 4),
 ('Alex', '1234', 5),
 ('Tarik', '1234', 6);

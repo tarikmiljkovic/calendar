@@ -10,7 +10,7 @@
 <h1>My Calendar</h1>
 
 <!-- Ajax -->
-<?php include("settings.inc.php"); ?>
+
 
 <div class="month">      
   <ul>
