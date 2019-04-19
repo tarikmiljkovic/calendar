@@ -4,6 +4,7 @@
   $userlogin=htmlspecialchars(stripslashes(trim($_POST['username'])));
   $password=htmlspecialchars(stripslashes(trim($_POST['password'])));
   
+  
   define('MYSQL_USER', 'root');
   define('MYSQL_PASSWORD', '');
   define('MYSQL_HOST', 'localhost');
@@ -20,11 +21,12 @@
     $pdoOptions //Options
   );
   //Retrieve the user account information for the given username.
-  $sql = "SELECT Nick,password FROM `User-credentials` WHERE Nick = :username AND password = :password";
+  $sql = "SELECT Nick,password,userID FROM `User-credentials` WHERE Nick = :username AND password = :password";
   $stmt = $pdo->prepare($sql);
   //Bind value. Always work with bind values in order to prevent SQL-injection attacks!
   $stmt->bindValue(':username', $userlogin);
   $stmt->bindValue(':password', $password);
+  // $stmt->bindValue(':userID', $userID);  
   $stmt->execute();
   //Fetch row.
   $user = $stmt->fetch(PDO::FETCH_ASSOC);
