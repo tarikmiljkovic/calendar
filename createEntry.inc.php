@@ -16,9 +16,9 @@
   Time: <input type="integer" id="time" name="time" required>
   <br><br>
   Type:
-  <input type="radio" name="type" id="type" value="private">private
-  <input type="radio" name="type"  id="type" value="public">public
-  <input type="radio" name="type"  id = "type" value="to do">to do  
+  <input type="radio" name="type" id="type" value="private" required>private
+  <input type="radio" name="type"  id="type" value="public" required>public
+  <input type="radio" name="type"  id = "type" value="to do" required>to do  
 	<br><br>
   <input type="submit" id="saveEntry" value="Create Entry">
 </form>

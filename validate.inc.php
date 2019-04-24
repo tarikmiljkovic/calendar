@@ -3,7 +3,7 @@
   //"trim" prevents spaces in string and "stripslashes" converts/removes slashes:
   $userlogin=htmlspecialchars(stripslashes(trim($_POST['username'])));
   $password=htmlspecialchars(stripslashes(trim($_POST['password'])));
-  
+  $userID = "";
   
   define('MYSQL_USER', 'root');
   define('MYSQL_PASSWORD', '');
@@ -31,6 +31,8 @@
   //Fetch row.
   $user = $stmt->fetch(PDO::FETCH_ASSOC);
   //If $row is FALSE.
+  
+  
   if($user === false){
     echo "<h4>Sorry, wrong credentials</h4>\n";
     include('login.inc.php');
@@ -39,6 +41,7 @@
       /* If credentials correct ->
       Set the Session Cookie in order to identify the user */
       $_SESSION['login'] = $userlogin;
+      $_SESSION['userID'] = $user['userID'];
       header("Location: index.php");
       //Display main interface
       include('main.inc.php');
@@ -49,34 +52,4 @@
   ?>
   
   <?php
-  //Hardcoded password verification
-  /*
-  if ($userlogin==="Alex" && $password=="1050") {
-      echo "<h2>Welcome " . $userlogin . " to the program </h2>\n";
-      //Set the Session Cookie in order to identify the user
-      $_SESSION['login'] = $userlogin;
-      header("Location: index.php");
-  }
-  elseif ($userlogin==="Musti" && $password=="1060") {
-      echo "<h2>Welcome " . $userlogin . " to the program </h2>\n";
-      //Set the Session Cookie in order to identify the user
-      $_SESSION['login'] = $userlogin;
-      header("Location: index.php");
-  }
-  elseif ($userlogin==="Ruffy" && $password=="1100") {
-      echo "<h2>Welcome " . $userlogin . " to the program </h2>\n";
-      //Set the Session Cookie in order to identify the user
-      $_SESSION['login'] = $userlogin;
-      header("Location: index.php");
-  }
-  elseif ($userlogin==="Tarik" && $password=="1234") {
-      echo "<h2>Welcome " . $userlogin . " to the program </h2>\n";
-      //Set the Session Cookie in order to identify the user
-      $_SESSION['login'] = $userlogin;
-      header("Location: index.php");
-  }
-  else {
-      echo "<h2>Sorry, login incorrect</h2>\n";
-      // header("Location: index.php");
-  } */
 ?>

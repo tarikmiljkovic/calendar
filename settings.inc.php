@@ -1,26 +1,3 @@
-<<<<<<< Updated upstream
-
-<table>
-    <tr>
-        <th>View</th>
-        <!-- <th>Hide</th> -->
-    </tr>
-    <tr>
-        <td>
-        <input name="option1" type="checkbox" />Day<br>
-        <input name="option2" type="checkbox" />Week<br>
-        <input name="option3" type="checkbox" />Month<br>
-        </td>
-        <!-- <td>
-        <input name="option4" type="checkbox" />Entries<br>
-        <input name="option5" type="checkbox" />Holidays<br>
-        <input name="option6" type="checkbox" />bla bla bla..<br>
-        </td> -->
-    </tr>
-</table>
-
-    
-=======
 <!DOCTYPE html>
 <html>
 <style>
@@ -42,12 +19,13 @@ th, td {
                 <tr>
                     <th><h3>View</h3></th>
                     <th><h3>Hide</h3></th>
+            <form id="sendSettings" method="post" action="savesettings.php">
                 </tr>
                 <tr>
                     <td>
-                    <input name="option1" type="checkbox" />Day<br>
-                    <input name="option2" type="checkbox" />Week<br>
-                    <input name="option3" type="checkbox" />Month<br>
+                    <input name="radio1" type="radio" value="Day" />Day<br>
+                    <input name="radio2" type="radio" value="Week" />Week<br>
+                    <input name="radio3" type="radio" value="Month" />Month<br>
                     </td>
         
                     <td>
@@ -59,6 +37,7 @@ th, td {
                 
             </table>
             <input type="submit" value="Save">
+            </form>
     </body>
     <!-- ## -->
 </html>

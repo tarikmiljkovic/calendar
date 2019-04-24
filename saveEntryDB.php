@@ -1,5 +1,7 @@
 <?php
-  $text = htmlspecialchars($_POST['text']);
+
+  session_start();
+  $text=htmlspecialchars($_POST['text']);
   $date=htmlspecialchars($_POST['date']);
   $time=htmlspecialchars($_POST['time']);
   $type=htmlspecialchars($_POST['type']);
@@ -35,17 +37,23 @@
     $pdoOptions //Options
   );
   
+  $userID = $_SESSION['userID'];
+  $userlogin = $_SESSION['login'];
+  
+  
   // prepare sql and bind parameters
-  $stmt = $pdo->prepare("INSERT INTO `calendar-entries` (Text, Date, Time, Type) 
-  VALUES (:text, :date, :time, :type)");
+  $stmt = $pdo->prepare("INSERT INTO `calendar-entries` (Text, Date, Time, Type, UserID) 
+  VALUES (:text, :date, :time, :type, :userID)");
   $stmt->bindParam(':text', $text);
   $stmt->bindParam(':date', $date);
   $stmt->bindParam(':time', $time);
   $stmt->bindParam(':type', $type);
+  $stmt->bindParam(':userID', $userID);
   //Excetute the statement, it. est. insert the row
   $stmt->execute();
   
-  echo "Entry saved";
+  
   $pdo = null;
+  echo "Entry saved";
   header("Location: index.php");
 ?>
