@@ -24,4 +24,4 @@
   <input type="submit" id="saveEntry" value="Submit">
 </form>
 
-<?php include("myCalendar.inc.php"); ?>
+

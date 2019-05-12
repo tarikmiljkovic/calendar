@@ -56,4 +56,5 @@
   $pdo = null;
   echo "Entry saved";
   header("Location: index.php");
+  
 ?>

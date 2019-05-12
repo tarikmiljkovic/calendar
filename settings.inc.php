@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <style>
 table {
   border-collapse: collapse;
@@ -14,7 +15,6 @@ th, td {
 
 <!-- SHOULD BE ADDED AS SIDE PANEL TO THE CALENDAR, AND NOT DISPLAYED ALONE! -->
     <body>
-        <h2>Calendar settings</h2><br>
             <table>
                 <tr>
                     <th><h3>View</h3></th>
@@ -41,5 +41,5 @@ th, td {
     </body>
     <!-- ## -->
 </html>
->>>>>>> Stashed changes
-<?php include("myCalendar.inc.php"); ?>
+
+

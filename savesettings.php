@@ -3,7 +3,7 @@
     
     
     <!-- Anzeigeänderungen im Kalender -->
-    
+    <?php header("Location: index.php"); ?>
     
     
     
