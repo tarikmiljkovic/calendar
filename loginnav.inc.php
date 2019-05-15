@@ -17,6 +17,7 @@
       <?php include("settings.inc.php"); ?>
     </div>
   </div>
+<a href="index.php?content=profile">Profile</a>
 <a href="index.php?content=logout">Log Out</a>
 
 <script>

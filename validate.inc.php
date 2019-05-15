@@ -49,7 +49,4 @@
         echo "<h2>Sorry, something went wrong :(</h2>\n";
         header("Location: index.php");
     }
-  ?>
-  
-  <?php
 ?>

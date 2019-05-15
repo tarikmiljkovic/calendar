@@ -16,7 +16,7 @@
     $pdoOptions //Options
   );
   
-  $stmt = $pdo->prepare("SELECT Text, Type, Name, Type, ID FROM `calendar-entries` WHERE UserID = $_SESSION['userID'];"); 
+  $stmt = $pdo->prepare("SELECT Text, Type, Name, ID FROM `calendar-entries` WHERE UserID = $_SESSION['userID'];"); 
   $stmt->execute();
   $array = $stmt->fetchAll( PDO::FETCH_ASSOC ); //Fetch all datas from the table
   $json = json_encode( $array ); //Convert associative Array into json

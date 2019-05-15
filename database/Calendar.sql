@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 24, 2019 at 07:49 PM
+-- Generation Time: May 15, 2019 at 07:26 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -25,6 +25,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `calendar-entries`
+--
+
+CREATE TABLE `calendar-entries` (
+  `Text` varchar(255) NOT NULL,
+  `Date` date NOT NULL,
+  `Time` time(4) NOT NULL,
+  `Type` varchar(11) NOT NULL,
+  `ID` int(255) NOT NULL,
+  `UserID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `User-credentials`
 --
 
@@ -39,14 +54,20 @@ CREATE TABLE `User-credentials` (
 --
 
 INSERT INTO `User-credentials` (`Nick`, `password`, `userID`) VALUES
-('Ruffy', '1234', 1),
+('Ruffy', '123456', 1),
 ('Musti', '1234', 2),
-('Alex', '1234', 3),
+('Alex', '4321', 3),
 ('Tarik', '1234', 4);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `calendar-entries`
+--
+ALTER TABLE `calendar-entries`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `User-credentials`
@@ -57,6 +78,12 @@ ALTER TABLE `User-credentials`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `calendar-entries`
+--
+ALTER TABLE `calendar-entries`
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `User-credentials`

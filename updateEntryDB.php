@@ -1,6 +1,6 @@
 <?php
-  $text = htmlspecialchars($_POST['text']);
-  $date = htmlspecialchars($_POST['date']);
+  $text=htmlspecialchars($_POST['text']);
+  $date=htmlspecialchars($_POST['date']);
   $time=htmlspecialchars($_POST['time']);
   $type=htmlspecialchars($_POST['type']);
 

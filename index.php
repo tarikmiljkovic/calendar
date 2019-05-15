@@ -1,21 +1,8 @@
 <?php
-  
   session_start();
 ?>
 <!DOCTYPE html>
-<!-- Check SQL DATABASE CONNECTION -->
-<?php
-  $servername = "localhost";
-  $user = "root";
-  $pw = "";
-  
-  $connection = new mysqli($servername, $user, $pw);
-  if($connection->connect_error){
-    die("Connection failed!".$connection->connect_error);
-  }
-  echo "SQL DB successfully connected!";
-?>
-<!--  -->
+
 <html lang="en">
 <head>
   <title>Calendar App</title>
@@ -59,6 +46,5 @@
 <footer class="footer">
 <img src="cal_logo.png" style="width:214px;height:214px"	;>
   <p>Created by Dag Mustafa, Rauschnick Alexander, Vanicek Rafael and Miljkovic Tarik</p>
-
 </body>
 </html>
